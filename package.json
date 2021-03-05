@@ -1,0 +1,27 @@
+{
+  "name": "@hackaton260321/template",
+  "version": "0.0.1",
+  "description": "FSQL for EGAL framework",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc index.ts",
+    "dev": "nodemon index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.smartworld.team:hackaton260321/template.git"
+  },
+  "author": {
+    "name": "Nikita Vtorushin",
+    "email": "n.vtorushin@smartworld.team",
+    "url": "smartworld.team"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "license": "ISC"
+}

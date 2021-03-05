@@ -1,0 +1,5 @@
+/workspace.xml
+/.idea/
+/node_modules/
+.npmrc
+package-lock.json
