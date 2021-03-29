@@ -16,7 +16,7 @@ constructor(id:number, ccyId:number, balance:number){
        return this.ccyId
    }
    getBalance(){
-       return this.balance.toFixed(5)
+       return this.balance
    }
 
 }

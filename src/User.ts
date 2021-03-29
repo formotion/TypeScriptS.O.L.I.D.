@@ -1,81 +1,77 @@
-import {Common} from './abstract/Common'
+import { Common } from './abstract/Common'
 export class User extends Common {
     protected id: number;
-    private mail:string;
+    private mail: string;
     private MD5Pass: string;
-    private cryptoIds: number [];
-    private roleIds: number [];
-    private goalIds: number [];
+    private cryptoIds: number[];
+    private roleIds: number[];
+    private goalIds: number[];
 
-    constructor(id:number, mail:string,pass:string, roleId:number){
+    constructor(id: number, mail: string, pass: string, roleId: number) {
         super()
-        this.id= id;
+        this.id = id;
         this.mail = mail;
         this.MD5Pass = pass;
-        this.cryptoIds=[];
+        this.cryptoIds = [];
         this.roleIds = [roleId]
-        this.goalIds=[]
+        this.goalIds = []
     }
 
-    /*getId(){
-        return this.id;
-    }*/
-
-    getMail(){
-       return this.mail;
+    getMail() {
+        return this.mail;
     }
-    setmail(mail:string){
+    setmail(mail: string) {
         this.mail = mail;
     }
 
-    getPass(){
+    getPass() {
         return this.MD5Pass;
     }
-    setPass(pass:string){
-        this.MD5Pass= pass;
+    setPass(pass: string) {
+        this.MD5Pass = pass;
     }
 
-    getCryptoIds(){
+    getCryptoIds() {
         return this.cryptoIds;
     }
-    addCryptoid(id:number){
+    addCryptoid(id: number) {
         this.cryptoIds.push(id)
     }
-    removeCryptoId(id:number){
-        let newCryptoIds=[]
-        this.cryptoIds.forEach((element, index, array)=>{
-            element!==id&&newCryptoIds.push(element)
+    removeCryptoId(id: number) {
+        let newCryptoIds = []
+        this.cryptoIds.forEach((element, index, array) => {
+            element !== id && newCryptoIds.push(element)
         })
-        this.cryptoIds= newCryptoIds;
+        this.cryptoIds = newCryptoIds;
     }
 
-    getRoles(){
-        return this.roleIds.forEach((element)=>{
+    getRoles() {
+        return this.roleIds.forEach((element) => {
             console.log('У пользователя id роль: ' + element)
         })
     }
-    addRole(id:number){
+    addRole(id: number) {
         this.roleIds.push();
     }
-    removeRole(id:number){
-        let newRoleIds=[]
-        this.roleIds.forEach((element, index, array)=>{
-            element!==id&&newRoleIds.push(element)
+    removeRole(id: number) {
+        let newRoleIds = []
+        this.roleIds.forEach((element, index, array) => {
+            element !== id && newRoleIds.push(element)
         })
-        this.roleIds= newRoleIds;
+        this.roleIds = newRoleIds;
     }
 
-    getGoals(){
+    getGoals() {
         return this.goalIds
     }
-    removeGoalId(id: number){
-        let newGoalIds=[]
-        this.goalIds.forEach((element, index, array)=>{
-            element!==id&&newGoalIds.push(element)
+    removeGoalId(id: number) {
+        let newGoalIds = []
+        this.goalIds.forEach((element, index, array) => {
+            element !== id && newGoalIds.push(element)
         })
-        this.roleIds= newGoalIds;
+        this.roleIds = newGoalIds;
     }
-    addGoalId(id:number){
+    addGoalId(id: number) {
         this.goalIds.push(id)
     }
 
